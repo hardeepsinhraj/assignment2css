@@ -9,6 +9,7 @@ html {
     transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
     border-radius: 0 0 15px 15px;
     background: linear-gradient(90deg, #50aeab 0%, #a1c5ea 100%);
+    
 }
 
 .navbar.sticky-top {
@@ -25,11 +26,12 @@ html {
 }
 
 .navbar-nav .nav-link {
-    font-size: 1.3rem;
+    font-size: 3.3rem;
     margin-left: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
     transition: color 0.3s, transform 0.2s;
+    border: 2px solid transparent;
 }
 
 .navbar-nav .nav-link::after {
