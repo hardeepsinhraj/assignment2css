@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stop Overthinking — Nick Trenton</title>
 
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
-  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-custom">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="images/logo.webp" alt="Stop Overthinking cover" class="logo">
-        <span class="brand-title">Stop Overthinking</span>
+        <img src="images/logo.webp" alt="Stop Overthinking" class="logo me-3">
+        <span class="fw-bold fs-3">Stop Overthinking</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
-          <li class="nav-item"><a class="nav-link" href="#toc">Contents</a></li>
+          <li class="nav-item"><a class="nav-link" href="#auth">Author</a></li>
           <li class="nav-item"><a class="nav-link" href="#buy">Buy</a></li>
           <li class="nav-item"><a class="nav-link" href="#publisher">Publisher</a></li>
         </ul>
@@ -35,253 +33,146 @@
     </div>
   </nav>
 
-  
-  <header class="intro">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-4 text-center">
-          <!-- main book cover uses the uploaded file path -->
-          <img src="images/book.jpg" alt="Stop Overthinking — cover" class="img-fluid book-cover shadow-sm">
-          <div class="mt-3 d-grid">
-            <a class="btn btn-primary btn-lg" href="#buy">Buy Now</a>
-            <a class="btn btn-outline-secondary mt-2" href="#sample">Read Sample</a>
-          </div>
-        </div>
+  <!-- MAIN WRAPPER -->
+  <div class="container py-5">
 
-        <div class="col-lg-8">
-          <h1 class="display-5 heading-font mb-3">Stop Overthinking</h1>
-          <p class="lead text-muted">23 techniques to relieve stress, stop negative spirals, declutter your mind, and focus on the present.</p>
-
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <p class="mb-1"><strong>Author:</strong> Nick Trenton</p>
-              <p class="mb-1"><strong>Publisher:</strong> Mindful Press</p>
-              <p class="mb-1"><strong>ISBN:</strong> 978-1-2345-6789-0</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-              <p class="mb-1"><strong>Formats:</strong> Hardcover · eBook · Audiobook</p>
-              <p class="mb-0 text-muted">Release: 2025</p>
-            </div>
-          </div>
-        </div>
+    <!-- BOOK COVER -->
+    <div class="row mb-5 justify-content-center">
+      <div class="col-auto text-center">
+        <img src="images/book1.jpg" class="img-fluid book-cover shadow-lg mb-4" alt="Book Cover">
+        <h2>Stop Overthinking: 23 Techniques to Relieve Stress, Stop Negative Spirals, Declutter Your Mind, and Focus on the Present</h2>
       </div>
     </div>
-  </header>
 
-  <!-- MAIN -->
-  <main class="content">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Left: editorial content + carousel + accordion -->
-        <section class="col-lg-7">
-          
-          <div id="galleryCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-            <div class="carousel-indicators position-absolute bottom-0 start-50 translate-middle-x mb-3">
-              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
-            </div>
+    <!-- AUTHOR LEFT & BOOK RIGHT -->
+    <div class="row g-4 align-items-stretch justify-content-center">
 
-            <div class="carousel">
+      <!-- LEFT COLUMN: Author -->
+      <div class="col-lg-3 col-md-4 d-flex">
+        <div class="card author-card flex-fill text-center p-4" id="auth">
+          <img src="images/nick.jpg" class="img-fluid rounded-circle mb-3 author-img" alt="Author Photo">
+          <h5 class="card-title mb-1 fs-4">Nick Trenton</h5>
+          <p class="text-muted mb-0 fs-5">Author · Coach · Speaker</p>
+          <p>Nick Trenton is an author, coach, and speaker specializing in mindfulness and stress management. He helps individuals break mental loops, improve focus, and regain clarity through practical, actionable strategies.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Book Carousel -->
+      <div class="col-lg-6 col-md-8 d-flex">
+        <div class="card flex-fill p-4 book-card">
+          <!-- BOOK TITLE -->
+          <h1 class="display-4 fw-bold mb-3">Other Addition:</h1>
+          <p class="text-muted fs-5 mb-4">“Overthinking doesn’t define you. Understanding it is the first step to mastering it.” — Nick Trenton</p>
+
+          <!-- CAROUSEL -->
+          <div id="bookCarousel" class="carousel slide mb-4 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images/book2.jpg" class="d-block w-100" alt="Related book 1">
-                <div class="carousel-caption bottom-caption">
-                  <h5>Mind Uncluttered</h5>
-                  <p>Techniques for clearer thinking.</p>
-                </div>
+                <img src="images/book2.jpg" class="d-block w-100 carousel-img" alt="Book Image 1">
               </div>
               <div class="carousel-item">
-                <img src="images/book3.jpg" class="d-block w-100" alt="Related book 2">
-                <div class="carousel-caption bottom-caption">
-                  <h5>Practical Calm</h5>
-                  <p>Everyday exercises to reduce worry.</p>
-                </div>
+                <img src="images/book3.jpg" class="d-block w-100 carousel-img" alt="Book Image 2">
               </div>
               <div class="carousel-item">
-                <img src="images/book4.jpg" class="d-block w-100" alt="Related book 3">
-                <div class="carousel-caption bottom-caption">
-                  <h5>Focus & Flow</h5>
-                  <p>Mastering mindful attention.</p>
-                </div>
+                <img src="images/book4.jpg" class="d-block w-100 carousel-img" alt="Book Image 3">
               </div>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
             </button>
           </div>
-
-          <!-- Synopsis excerpt -->
-          <article id="about" class="about1">
-            <h2 class="h4">Synopsis</h2>
-            <p class="text-muted">In <em>Stop Overthinking</em>, Nick Trenton offers concise, practical techniques that help readers interrupt runaway thought patterns and rediscover calm. Grounded in cognitive-behavioural strategies and written with a warm, editorial voice, this book guides you through 23 simple practices to reduce worry and act with clarity.</p>
-            <a href="#sample" class="text-decoration-none">Read an excerpt →</a>
-          </article>
-
-          <!-- Accordion  -->
-          <div id="toc" class="accordion">
-            <h3 class="h5 mb-3">Contents</h3>
-            <div class="accordion" id="contentsAccordion">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                    Part I — Understanding Overthinking
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#contentsAccordion">
-                  <div class="accordion-body">
-                    1. The Mechanics of Worry · 2. Triggers and Patterns · 3. Small Experiments
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                    Part II — Techniques
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#contentsAccordion">
-                  <div class="accordion-body">
-                    4. Grounding · 5. Single-Tasking · 6. Micro-Decisions
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                    Part III — Keeping the Gains
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#contentsAccordion">
-                  <div class="accordion-body">
-                    7. Routines · 8. Habits · 9. When to Seek Help
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-        <!-- author, reviews, buy panel, tabs -->
-        <aside class="author">
-          <!-- Author -->
-          <div class="card mb-3 author-card">
-            <div class="row g-0 align-items-center">
-              <div class="col-4">
-                <img src="images/nick.jpg" class="img-fluid rounded-start" alt="Nick Trenton (author)">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h5 class="card-title mb-0">Nick Trenton</h5>
-                  <p class="card-text small text-muted mb-0">Author · Coach · Speaker</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reviews -->
-          <section id="reviews" class="mb-4">
-            <h3 class="h6">Praise</h3>
-            <div class="list-group">
-              <div class="list-group-item">
-                <strong>The Times</strong>
-                <p class="mb-0">"A concise manual for quieting the mind — practical and humane."</p>
-              </div>
-              <div class="list-group-item">
-                <strong>Mindful Living</strong>
-                <p class="mb-0">"Accessible techniques that actually work — essential reading."</p>
-              </div>
-              <div class="list-group-item">
-                <strong>Booklist</strong>
-                <p class="mb-0">"Readable, focused, and surprisingly lifting."</p>
-              </div>
-            </div>
-          </section>
-
-          <!-- Buy Now form -->
-          <section id="buy" class="mb-4">
-            <h3 class="h6">Buy Now</h3>
-            <form id="buyForm" class="card p-3">
-              <div class="mb-2">
-                <label class="form-label">Format</label>
-                <select id="formatSelect" class="form-select">
-                  <option>Hardcover — $22.99</option>
-                  <option>Paperback — $12.99</option>
-                  <option>eBook — $6.99</option>
-                  <option>Audiobook — $14.99</option>
-                </select>
-              </div>
-              <div class="mb-2">
-                <label class="form-label">Quantity</label>
-                <input id="qtyInput" type="number" class="form-control" min="1" value="1">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input id="emailInput" type="email" class="form-control" placeholder="you@example.com" required>
-              </div>
-              <div class="d-grid">
-                <button id="purchaseBtn" class="btn btn-success" type="submit">Add to Cart</button>
-              </div>
-            </form>
-            <div class="small text-muted mt-2">Secure checkout on purchase. Taxes/shipping calculated at checkout.</div>
-          </section>
-
-          <!-- Tab panel: publisher info, rights, contact -->
-          <section id="publisher">
-            <h3 class="h6">Publisher</h3>
-            <ul class="nav nav-tabs mb-2" id="pubTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pub-info-tab" data-bs-toggle="tab" data-bs-target="#pub-info" type="button" role="tab">About</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pub-rights-tab" data-bs-toggle="tab" data-bs-target="#pub-rights" type="button" role="tab">Rights</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pub-contact-tab" data-bs-toggle="tab" data-bs-target="#pub-contact" type="button" role="tab">Contact</button>
-              </li>
-            </ul>
-
-            <div class="tab-content border rounded p-3">
-              <div class="tab-pane fade show active" id="pub-info" role="tabpanel">
-                <p class="mb-0"><strong>Mindful Press</strong><br>Publishing imprint focusing on practical mental wellness titles.</p>
-              </div>
-              <div class="tab-pane fade" id="pub-rights" role="tabpanel">
-                <p class="mb-0">Rights & permissions: rights@mindfulpress.example</p>
-              </div>
-              <div class="tab-pane fade" id="pub-contact" role="tabpanel">
-                <p class="mb-0">Publicity: publicity@mindfulpress.example</p>
-              </div>
-            </div>
-          </section>
-
-        </aside>
+        </div>
       </div>
     </div>
-  </main>
+
+    <!-- SYNOPSIS -->
+    <section class="p-5 bg-white border rounded mb-4 content-section">
+      <h4 class="mb-3 fs-3">Synopsis</h4>
+      <p class="fs-5">
+        A practical guide offering techniques to quiet the mind, break overthinking cycles, and regain clarity.
+      </p>
+    </section>
+
+    <!-- ACCORDION -->
+    <section class="accordion mb-4 content-section" id="bookAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fs-5" data-bs-toggle="collapse" data-bs-target="#part1">
+            Part I — Understanding Overthinking
+          </button>
+        </h2>
+        <div id="part1" class="accordion-collapse collapse" data-bs-parent="#bookAccordion">
+          <div class="accordion-body fs-5">
+           <p>Overthinking often begins with specific triggers such as stressful events, difficult decisions, or self-doubt, causing the mind to fixate on “what ifs” and potential outcomes. Common patterns include ruminating on past mistakes, imagining worst-case scenarios, struggling with indecision, and seeking constant reassurance from others. These thoughts can create cognitive loops, cycling endlessly without resolution and intensifying emotions like anxiety, guilt, or frustration, which in turn reduce focus, productivity, and well-being. By recognizing these triggers, patterns, and loops, individuals can gain awareness of overthinking and take steps toward breaking the cycle to regain mental clarity and calm.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fs-5" data-bs-toggle="collapse" data-bs-target="#part2">
+            Part II — Techniques
+          </button>
+        </h2>
+        <div id="part2" class="accordion-collapse collapse" data-bs-parent="#bookAccordion">
+          <div class="accordion-body fs-5">
+           <p>o manage overthinking effectively, it helps to use practical techniques that calm the mind and refocus attention. Grounding exercises, such as mindful breathing or connecting with the senses, can anchor you in the present moment. Setting time limits for decision-making reduces rumination, while breaking problems into smaller steps makes them feel manageable. Journaling thoughts helps release mental clutter, and practicing self-compassion reduces harsh self-criticism. Incorporating regular physical activity, establishing routines, and engaging in hobbies also provide mental relief. By consistently applying these strategies, you can interrupt overthinking cycles, regain focus, and foster emotional balance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="p-5 bg-white border rounded mb-4 content-section">
+      <h5 class="mb-3 fs-3">Review</h5>
+      <p class="fs-5"><strong>
+Md shumaal:</strong> “This book helps us to overcome overthinking which is the root cause of many of our problems such as anxiety, stress and negativity. In this book the author shares 23 techniques to relieve stress, stop negative spirals, calm your mind, and focus on the present.
+
+There are a total of 6 chapters in which the first chapter talks about mental health conditions and in  chapter 2 I like the "4 A's of Stress Management" where the author says, "You only need to remember four techniques: Avoid, Change, Accept and Adapt". You will definitely find it very helpful as it is one of the best stress management techniques.”</p>
+      <p class="fs-5"><strong>
+Diamond Cole:</strong> “This book is a MUST read. Really helps you delve deeper into the thought process of anxiety and stressors. How mentally we create all these factors and knowingly we can choose to adapt, alter or avoid them.”</p>
+    </section>
+
+    <!-- BUY FORM -->
+    <section class="p-5 bg-white border rounded mb-4 content-section" id="buy">
+      <h5 class="mb-3 fs-3">Buy Now</h5>
+      <form>
+        <select class="form-select mb-3 fs-5">
+          <option>Hardcover — $22.99</option>
+          <option>Paperback — $12.99</option>
+          <option>eBook — $6.99</option>
+        </select>
+        <input type="email" class="form-control mb-3 fs-5" placeholder="Email">
+        <button class="btn btn-success w-100 fs-5 py-2">Add to Cart</button>
+      </form>
+    </section>
+
+    <!-- PUBLISHER -->
+    <section class="p-5 bg-white border rounded mb-3 content-section" id="publisher">
+      <h5 class="mb-2 fs-3">Publisher</h5>
+      <p class="fs-5 mb-0">Mindful Press • Wellness & Cognitive Awareness Books</p>
+    </section>
+
+  </div>
 
   <!-- FOOTER -->
- <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="bg-dark text-white py-5 mt-5">
     <div class="container text-center">
-        <h5 class="fw-bold mb-2">Stop Overthinking</h5>
-        <p class="mb-1">A practical guide by Nick Trenton</p>
-
-        <div class="mt-3">
-            <a href="#" class="text-white mx-2 text-decoration-none">Privacy Policy</a>
-            <a href="#" class="text-white mx-2 text-decoration-none">Terms of Service</a>
-            <a href="#" class="text-white mx-2 text-decoration-none">Contact</a>
-        </div>
-
-        <p class="mt-3 mb-0 small">&copy; 2025 All Rights Reserved.</p>
+      <h5 class="fw-bold mb-3 fs-4">Stop Overthinking</h5>
+      <p class="mb-2 fs-5">A practical guide by Nick Trenton</p>
+      <div class="mt-3">
+        <a href="#" class="text-white mx-3 text-decoration-none fs-5">Privacy Policy</a>
+        <a href="#" class="text-white mx-3 text-decoration-none fs-5">Terms of Service</a>
+        <a href="#" class="text-white mx-3 text-decoration-none fs-5">Contact</a>
+      </div>
+      <p class="mt-3 mb-0 small">&copy; 2025 All Rights Reserved.</p>
     </div>
-</footer>
+  </footer>
 
-
- 
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
