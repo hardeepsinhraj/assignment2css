@@ -8,7 +8,7 @@ html {
     padding: 1.8rem 0;  
     transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
     border-radius: 0 0 15px 15px;
-    background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(90deg, #50aeab 0%, #a1c5ea 100%);
 }
 
 .navbar.sticky-top {
@@ -108,70 +108,130 @@ html {
 .content-section p, .accordion-body, .form-select, .form-control, .btn {
     font-size: 1.3rem;
 }
+ #synopsis{
+    background:linear-gradient(90deg, #ccf2f2b6 0%, #d7f2e79d 100%) ;}
 
 /* Accordion enhancements */
 .accordion-button {
-    font-size: 1.3rem;
+    font-size: 5.3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ccf2f2b6 0%, #d7f2e79d 100%);
 }
 .accordion-body {
-    font-size: 1.25rem;
-    background-color: #f8f9fa;
+    font-size: 4.25rem;
+    font-style: italic;
+    background: linear-gradient(90deg, #50aeab 0%, #a1c5ea 100%);
+}
+
+#review{
+    background:linear-gradient(90deg, #ccf2f2b6 0%, #d7f2e79d 100%) ;
 }
 
 /* Buy Form */
+
 #buy form {
-    display: grid;
-    gap: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
+/* Select and Email Input */
 #buy select.form-select,
 #buy input.form-control {
-    font-size: 1.5rem; 
-    padding: 1.1rem 1.2rem;
-    border-radius: 12px;
-    border: 1px solid #058c93;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    width: 100%;
-    transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 1.3rem;           
+  padding: 1rem 1.2rem;        
+  border-radius: 10px;
+  border: 2px solid #5ddbec;       
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+  background-color: #f2f2f2;        
+  color: #333;                       
 }
-
 #buy select.form-select:focus,
 #buy input.form-control:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 12px rgba(13,110,253,0.3);
-    outline: none;
+  border-color: #82e4f1c1;            
+  box-shadow: 0 0 10px rgba(93,219,236,0.3);
+  background-color: #e6f7fb;        
+  outline: none;
 }
 
+/* Button */
 #buy button.btn {
-    font-size: 1.5rem;
-    padding: 1.1rem 0;
-    border-radius: 12px;
-    width: 100%;
-    transition: transform 0.2s, box-shadow 0.3s;
+  font-size: 1.4rem;           
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  background-color: #72afb7;       
+  color: #fff;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
 }
 
 #buy button.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(101, 224, 130, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(93,219,236,0.25);
+  background-color: #4ac3e0;      
 }
 
-/* Publisher Button Switcher */
+
+/* Publisher Section */
+.publisher-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.publisher-btn {
+  background-color: #f8f9fa;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.publisher-btn:hover {
+  background-color: #7ee6e6c1;
+  color: #080808;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+}
+
+.publisher-btn.active {
+background: linear-gradient(90deg, #50aeab 0%, #a1c5ea 100%);
+  color: #080808;
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
+  transform: translateY(-2px);
+}
+
 .publisher-content {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    background-color: #fff;
-    min-height: 60px;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: bold;
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background:linear-gradient(90deg, #ccf2f2b6 0%, #d7f2e79d 100%) ;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  min-height: 60px; 
 }
 
 .publisher-content .content-item {
-    display: none;
+  display: none;
 }
 
 .publisher-content .content-item.active {
-    display: block;
+  display: block;
+}
+footer{
+     padding: 1.8rem 0;  
+    transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
+    border-radius: 0 0 15px 15px;
+    background: linear-gradient(90deg, #50aeab 0%, #a1c5ea 100%);
 }
 
 /* Responsive adjustments */
