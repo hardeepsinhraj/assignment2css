@@ -1,0 +1,196 @@
+html {
+    scroll-behavior: smooth;
+    background: no-repeat center center fixed;
+}
+
+/* Navbar improvements */
+.navbar {
+    padding: 1.8rem 0;  
+    transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
+    border-radius: 0 0 15px 15px;
+    background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.navbar.sticky-top {
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+}
+
+.navbar-brand img.logo {
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.navbar-brand img.logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #0d6efd;
+    transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Book cover */
+.book-cover {
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Author card */
+.author-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
+    padding: 2.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    background-color: #fff;
+}
+
+.author-img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Book carousel card */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    background-color: #fff;
+}
+
+/* Carousel images */
+#bookCarousel .carousel-item img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Content sections */
+.content-section h4, .content-section h5 {
+    font-size: 1.8rem;
+}
+.content-section p, .accordion-body, .form-select, .form-control, .btn {
+    font-size: 1.3rem;
+}
+
+/* Accordion enhancements */
+.accordion-button {
+    font-size: 1.3rem;
+}
+.accordion-body {
+    font-size: 1.25rem;
+    background-color: #f8f9fa;
+}
+
+/* Buy Form */
+#buy form {
+    display: grid;
+    gap: 1.8rem;
+}
+
+#buy select.form-select,
+#buy input.form-control {
+    font-size: 1.5rem; 
+    padding: 1.1rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #058c93;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#buy select.form-select:focus,
+#buy input.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 12px rgba(13,110,253,0.3);
+    outline: none;
+}
+
+#buy button.btn {
+    font-size: 1.5rem;
+    padding: 1.1rem 0;
+    border-radius: 12px;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+#buy button.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(101, 224, 130, 0.25);
+}
+
+/* Publisher Button Switcher */
+.publisher-content {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    background-color: #fff;
+    min-height: 60px;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.publisher-content .content-item {
+    display: none;
+}
+
+.publisher-content .content-item.active {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .author-card, .book-card {
+        min-height: auto;
+        padding: 2rem 1rem;
+    }
+    #bookCarousel .carousel-item img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .author-card, .book-card {
+        min-height: auto;
+        padding: 1.8rem 1rem;
+    }
+    #bookCarousel .carousel-item img {
+        max-height: 250px;
+    }
+}
